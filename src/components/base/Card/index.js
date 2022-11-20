@@ -3,11 +3,16 @@ import { Link } from "react-router-dom";
 
 import "./card.css";
 
-const Card = ({src,to,titleName,price,brand}) => {
+const Card = ({ src, to, titleName, price, brand }) => {
   return (
     <Fragment>
       <div className="card card-shadow">
-        <img src={src} className="img-fluid categories-card" alt="..." />
+        <img
+          crossorigin="anonymous"
+          src={src}
+          className="img-fluid categories-card"
+          alt="..."
+        />
         <div className="card-body shadow-md">
           <h5 className="card-title">
             <Link to={to}>{titleName}</Link>
@@ -26,6 +31,6 @@ const Card = ({src,to,titleName,price,brand}) => {
       </div>
     </Fragment>
   );
-}
+};
 
-export default Card
+export default Card;
