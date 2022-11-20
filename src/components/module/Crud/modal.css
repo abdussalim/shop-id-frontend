@@ -1,0 +1,61 @@
+.btn-success{
+    border: 1px solid #4fd15a !important;
+    background-color: #4fd15a !important;
+}
+
+.btn-success:hover {
+    border: 1px solid #57f664 !important;
+    background-color: #57f664 !important;
+}
+
+.button-border-radius{
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+input.form-control.mt-3{
+    border-radius: 20px !important;
+    font-weight: bold !important;
+    color: #4e4b4b !important;
+    height: 2.45rem;
+}
+
+input[type="file"].form-control.mt-3{
+    color: #a7a3a3 !important;
+}
+
+input.form-control::placeholder{
+    font-weight: bold;
+    color: #a7a3a3;
+}
+
+.modal-header .close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff !important;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.modal-header {
+    color: #fff;
+    font-weight: bolder;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #4fd15a !important;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-content
+{
+    border-radius: 20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    background-color: #eee;
+}
