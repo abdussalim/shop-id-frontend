@@ -1,6 +1,5 @@
-import React, { useEffect} from 'react'
+import React, { useEffect } from "react";
 import "../StyleHome.css";
-// import product from "../../../../assets/image/product.png";
 import axios from "axios";
 import Card from "../../../base/Card";
 import { useDispatch, useSelector } from "react-redux";
@@ -35,6 +34,7 @@ function Popular() {
             {products.map((item) => (
               <div className="col" key={item.id}>
                 <Card
+                  crossorigin="anonymous"
                   src={item.thumbnail}
                   to={`/detail/${item.id}`}
                   titleName={item.name}
@@ -50,4 +50,4 @@ function Popular() {
   );
 }
 
-export default Popular
+export default Popular;
