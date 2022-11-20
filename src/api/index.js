@@ -1,4 +1,3 @@
-
 export const setHeaders = () => {
   const headers = {
     headers: {

@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { ActionTypes } from "../constants/action-types";
 
 export const setProducts = (products) => {
@@ -8,47 +7,6 @@ export const setProducts = (products) => {
     payload: products,
   };
 };
-
-// export const getProduct =
-//   ({ page, limit, search, sort }) =>
-//   async (dispatch) => {
-//     try {
-//       const navigate = useNavigate();
-//       dispatch({ type: ActionTypes.GET_PRODUCT_PENDING });
-//       const { data } = await axios({
-//         url: `/products/filter?page=${page}&limit=${limit}${
-//           search ? "&search=" + search : ""
-//         }${sort ? "&sort=" + sort : ""}`,
-//         method: "GET",
-//       });
-//       dispatch({
-//         type: ActionTypes.GET_PRODUCT_SUCCESS,
-//         payload: { data: data.data, pagination: data.pagination },
-//       });
-//       navigate("/productList");
-//     } catch (error) {
-//       dispatch({
-//         type: ActionTypes.GET_PRODUCT_ERROR,
-//         payload: error.response,
-//       });
-//     }
-//   };
-
-// export const setDataProduct = (page, type) => (dispatch) => {
-//   axios
-//     .get(
-//       `${process.env.REACT_APP_API_BACKEND}/products?page=${page}&type=${type}`
-//     )
-//     .then((result) => {
-//       const response = result.data.data;
-//       dispatch({ type: ActionTypes.SET_PRODUCTS, payload: response });
-//       const pagination = result.data.pagination;
-//       dispatch({ type: ActionTypes.UPDATE_PAGE, payload: pagination });
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// };
 
 export const selectedProduct = (product) => {
   return {
@@ -85,7 +43,7 @@ export const createProduct = (data, navigate) => async (dispatch) => {
       {
         "content-type": "multipart/form-data",
         headers: {
-        Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,
         },
       }
     );
