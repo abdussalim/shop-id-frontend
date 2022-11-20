@@ -1,16 +1,16 @@
 import axios from "axios";
+import "./navbarbase.css";
 import swal from "sweetalert2";
-import { useSearchParams } from "react-router-dom";
 import bell from "../../../assets/image/bell.png";
 import mail from "../../../assets/image/mail.png";
+import { useSearchParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import cart from "../../../assets/image/search.svg";
 import { Link, useNavigate } from "react-router-dom";
 import Profil from "../../../assets/image/profil.png";
 import { useDispatch, useSelector } from "react-redux";
-import { signOut } from "../../../configs/redux/actions/userAction";
 import { Dropdown, DropdownButton } from "react-bootstrap";
-import "./navbarbase.css";
+import { signOut } from "../../../configs/redux/actions/userAction";
 
 const NavbarBase = ({ onChange, onClick, src, srcCart }) => {
   const { user } = useSelector((state) => state.auth);
@@ -116,31 +116,21 @@ const NavbarBase = ({ onChange, onClick, src, srcCart }) => {
                 variant="link"
                 id="dropdown-menu-align-end"
               >
-                <Dropdown.Item variant="link">
-                  {" "}
+                <Dropdown.Item className="d-flex justify-content-center">
                   <p>
                     <b>{user.fullname}</b>
                   </p>
                 </Dropdown.Item>
                 <Dropdown.Divider />
                 <Link to="/productList">
-                  <Dropdown.Item
-                    variant="secondary"
-                    eventKey="4"
-                    className="btn bg-transparent"
-                  >
-                    {" "}
-                    My Product
+                  <Dropdown.Item className="d-flex justify-content-center">
+                    <button className="btn bg-transparent">My Product</button>
                   </Dropdown.Item>
                 </Link>
                 <Dropdown.Divider />
                 <Link to="/login" onClick={() => handleSignOut()}>
-                  <Dropdown.Item
-                    eventKey="4"
-                    variant="secondary"
-                    className="btn bg-transparent"
-                  >
-                    Logout
+                  <Dropdown.Item className="btn bg-transparent d-flex justify-content-center">
+                    <button className="btn bg-transparent">Logout</button>
                   </Dropdown.Item>
                 </Link>
               </DropdownButton>
