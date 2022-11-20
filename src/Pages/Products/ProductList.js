@@ -5,23 +5,23 @@ import Swal from "sweetalert2";
 
 import "../../components/module/Profile/profile.css";
 import Profile from "../../components/module/Profile/Profile";
-import Footer from "../../components/module/home/footer/Footer";
 import Navbar from "../../components/module/home/navbar/Navbar";
-import CreateModalProduct from "../../components/module/Crud/CreateModalProduct";
+import Footer from "../../components/module/home/footer/Footer";
 import EditModalProduct from "../../components/module/Crud/EditModalProduct";
+import CreateModalProduct from "../../components/module/Crud/CreateModalProduct";
 
 const ProductList = () => {
   const [products, getProducts] = useState([]);
   const fetchData = async () => {
     try {
-      const token = localStorage.getItem("token");
+      // const token = localStorage.getItem("token");
       const gettingData = await axios.get(
-        `${process.env.REACT_APP_API_BACKEND}/products`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
+        `${process.env.REACT_APP_API_BACKEND}/products`
+        // {
+        //   headers: {
+        //     Authorization: `Bearer ${token}`,
+        //   },
+        // }
       );
       getProducts(gettingData.data.data);
     } catch (error) {
