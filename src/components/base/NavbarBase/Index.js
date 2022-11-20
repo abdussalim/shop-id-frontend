@@ -48,19 +48,14 @@ const NavbarBase = ({ onChange, onClick, src, srcCart }) => {
     data();
   }, []);
 
-
   const data = async () => {
     const token = localStorage.getItem("token");
 
-    await axios.get(
-      `${process.env.REACT_APP_API_BACKEND}/users/profile`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-
+    await axios.get(`${process.env.REACT_APP_API_BACKEND}/users/profile`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
   };
   return (
     <nav className="navbar navbar-expand-md navbar-light fixed-top mb-4">
@@ -88,7 +83,6 @@ const NavbarBase = ({ onChange, onClick, src, srcCart }) => {
                 <i className="bi bi-search" onClick={handleSearch}></i>
               </span>
             </div>
-            
           </ul>
           {user?.id ? (
             <>
@@ -102,9 +96,7 @@ const NavbarBase = ({ onChange, onClick, src, srcCart }) => {
                     }}
                   >
                     <img src={cart} alt="" className="icon-cart mb-2" />
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      {/* {data.cart.length} */}
-                    </span>
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
                   </button>
                 </Link>
                 <img src={bell} alt="" className="icon-cart ms-3 mb-2" />
@@ -114,7 +106,7 @@ const NavbarBase = ({ onChange, onClick, src, srcCart }) => {
                 align="end"
                 title={
                   <img
-                    src={Profil} // Set Date_of_Birth
+                    src={Profil}
                     alt=""
                     width={35}
                     height={35}
@@ -126,21 +118,32 @@ const NavbarBase = ({ onChange, onClick, src, srcCart }) => {
               >
                 <Dropdown.Item variant="link">
                   {" "}
-                  <p><b>{user.fullname}</b></p>
+                  <p>
+                    <b>{user.fullname}</b>
+                  </p>
                 </Dropdown.Item>
                 <Dropdown.Divider />
-                <Dropdown.Item variant="secondary" eventKey="4">
-                  {" "}
-                  <Link to="/productList"> My Products</Link>
-                </Dropdown.Item>
+                <Link to="/productList">
+                  <Dropdown.Item
+                    variant="secondary"
+                    eventKey="4"
+                    className="btn bg-transparent"
+                  >
+                    {" "}
+                    My Product
+                  </Dropdown.Item>
+                </Link>
                 <Dropdown.Divider />
-                <Dropdown.Item eventKey="4" variant="danger">
-                  <Link to="/login" onClick={() => handleSignOut()}>
+                <Link to="/login" onClick={() => handleSignOut()}>
+                  <Dropdown.Item
+                    eventKey="4"
+                    variant="secondary"
+                    className="btn bg-transparent"
+                  >
                     Logout
-                  </Link>
-                </Dropdown.Item>
+                  </Dropdown.Item>
+                </Link>
               </DropdownButton>
-
             </>
           ) : (
             <>

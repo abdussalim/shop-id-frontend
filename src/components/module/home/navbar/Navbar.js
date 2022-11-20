@@ -1,10 +1,10 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 
-import NavbarBase from "../../../base/NavbarBase/Index"
+import NavbarBase from "../../../base/NavbarBase/Index";
 import logo from "../../../../assets/image/shop-id.svg";
-import cart from "../../../../assets/image/search.svg"
+import cart from "../../../../assets/image/search.svg";
 import Profil from "../../../../assets/image/profil.png";
 import bell from "../../../../assets/image/bell.png";
 import mail from "../../../../assets/image/mail.png";
@@ -13,41 +13,33 @@ import { Dropdown } from "react-bootstrap";
 import { signOut } from "../../../../configs/redux/actions/userAction";
 import "../StyleHome.css";
 
-
 const Navbar = ({ onChange }) => {
-const { user } = useSelector((state) => state.auth);
-const dispatch = useDispatch();
-console.log(user);
+  const { user } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  console.log(user);
   const handleSignOut = () => {
-  localStorage.removeItem("id");
-  dispatch(signOut());
-};
-const [date_of_birth, setDate_of_birth] = useState("");
-useEffect(() => {
-  datas();
-}, []);
+    localStorage.removeItem("id");
+    dispatch(signOut());
+  };
+  useEffect(() => {
+    datas();
+  }, []);
 
-const datas = async () => {
-  const token = localStorage.getItem("token");
-  const response = await axios.get(
-    `${process.env.REACT_APP_API_BACKEND}/users/profile`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-  console.log(response.data.data.email);
-  setDate_of_birth(response.data.data[0].date_of_birth);
-};
+  const datas = async () => {
+    const token = localStorage.getItem("token");
+    const response = await axios.get(
+      `${process.env.REACT_APP_API_BACKEND}/users/profile`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    console.log(response.data.data.email);
+  };
   return (
     <div>
-      
-      <NavbarBase
-        src={logo}
-        srcCart={cart}
-        onChange={onChange}
-      ></NavbarBase>
+      <NavbarBase src={logo} srcCart={cart} onChange={onChange}></NavbarBase>
 
       <nav className="footer-nav bg-light text-center fixed-top">
         {user?.id ? (
@@ -73,7 +65,7 @@ const datas = async () => {
             <Dropdown className="d-inline mx-2">
               <Dropdown.Toggle variant="light" id="dropdown-basic">
                 <img
-                  src={date_of_birth ? date_of_birth : Profil}
+                  src={Profil}
                   alt=""
                   width={25}
                   height={25}
@@ -84,7 +76,7 @@ const datas = async () => {
                 <Dropdown.Item>
                   <Link to="/login">
                     <button
-                      className=""
+                      className="btn bg-transparent"
                       onClick={() => handleSignOut()}
                       type="button"
                     >
@@ -95,10 +87,10 @@ const datas = async () => {
                 </Dropdown.Item>
                 <Dropdown.Item>
                   <Link to="/productList">
-                    <button className="">Edit Profile</button>
+                    <button className="btn bg-transparent">Edit Profile</button>
                   </Link>
                 </Dropdown.Item>
-                <Dropdown.Item>Hallo! {user.name}</Dropdown.Item>
+                <Dropdown.Item>{user.fullname}</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </div>
@@ -132,4 +124,4 @@ const datas = async () => {
   );
 };
 
-export default Navbar
+export default Navbar;
