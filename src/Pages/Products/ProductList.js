@@ -129,7 +129,7 @@ const ProductList = () => {
                       <td>{item.brand}</td>
                       <td>
                         <img
-                          crossorigin="anonymous"
+                          // crossorigin="anonymous"
                           src={item.thumbnail}
                           alt=""
                           width={50}
