@@ -44,7 +44,12 @@ const ProductList = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         await axios
-          .delete(`${process.env.REACT_APP_API_BACKEND}/products/${id}`)
+          .delete(`${process.env.REACT_APP_API_BACKEND}/products/${id}`, {
+            headers: {
+              "Content-Type": "multipart/form-data",
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          })
           .then(() => {
             Swal.fire("Deleted!", "Your message has been deleted.", "success");
             setTimeout(window.location.reload.bind(window.location), 2000);
@@ -129,7 +134,6 @@ const ProductList = () => {
                       <td>{item.brand}</td>
                       <td>
                         <img
-                          // crossorigin="anonymous"
                           src={item.thumbnail}
                           alt=""
                           width={50}

@@ -7,12 +7,7 @@ const Card = ({ src, to, titleName, price, brand }) => {
   return (
     <Fragment>
       <div className="card card-shadow">
-        <img
-          crossorigin="anonymous"
-          src={src}
-          className="img-fluid categories-card"
-          alt="..."
-        />
+        <img src={src} className="img-fluid categories-card" alt="..." />
         <div className="card-body shadow-md">
           <h5 className="card-title">
             <Link to={to}>{titleName}</Link>
