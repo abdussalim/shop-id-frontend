@@ -2,6 +2,9 @@
   "name": "shop.id",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "@arismun/format-rupiah": "^3.0.0",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
