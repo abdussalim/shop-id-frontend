@@ -34,7 +34,6 @@ const NewProduct = () => {
           {products.map((item) => (
             <div className="col" key={item.id}>
               <Card
-                crossorigin="anonymous"
                 src={item.thumbnail}
                 to={`/detail/${item.id}`}
                 titleName={item.name}
