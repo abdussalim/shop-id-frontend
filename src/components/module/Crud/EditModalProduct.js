@@ -51,7 +51,7 @@ function EditModalProduct({
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(handleEdit(id, data, saveThumbnail, setShow));
-    setTimeout(window.location.reload.bind(window.location), 4000);
+    // setTimeout(window.location.reload.bind(window.location), 4000);
   };
 
   return (

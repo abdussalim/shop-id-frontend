@@ -14,14 +14,14 @@ const ProductList = () => {
   const [products, getProducts] = useState([]);
   const fetchData = async () => {
     try {
-      // const token = localStorage.getItem("token");
+      const token = localStorage.getItem("token");
       const gettingData = await axios.get(
-        `${process.env.REACT_APP_API_BACKEND}/products`
-        // {
-        //   headers: {
-        //     Authorization: `Bearer ${token}`,
-        //   },
-        // }
+        `${process.env.REACT_APP_API_BACKEND}/products`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
       getProducts(gettingData.data.data);
     } catch (error) {
