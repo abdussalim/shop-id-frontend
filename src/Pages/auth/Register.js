@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 import logo from "../../assets/image/shop-id.svg";
-// import Style from '../auth/style.module.css'
-// import PropTypes from "prop-types";
-// import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { signUp } from "../../configs/redux/actions/userAction";
 const Register = ({ label, ...props }) => {
@@ -15,18 +12,18 @@ const Register = ({ label, ...props }) => {
     name: "",
     email: "",
     password: "",
-    role: "buyer"
+    role: "buyer",
   });
 
-      if (auth === user) {
-        alert("Upsss... You are wrong!");
-      }
-      console.log(user);
+  if (auth === user) {
+    alert("Upsss... You are wrong!");
+  }
+  console.log(user);
   const handleChange = (e) => {
     setUser({
       ...user,
       [e.target.name]: e.target.value,
-      role : "buyer"
+      role: "buyer",
     });
   };
 
@@ -34,7 +31,7 @@ const Register = ({ label, ...props }) => {
     e.preventDefault();
     dispatch(signUp(user, navigate));
   };
-if (auth.id) return navigate("/login");
+  if (auth.id) return navigate("/login");
 
   return (
     <div>
@@ -103,7 +100,7 @@ if (auth.id) return navigate("/login");
           <button className="w-100 btn btn-sign mt-5" type="submit">
             Register
           </button>
-          <label className="login mb-3 mt-4" for="">
+          <label className="login mb-3 mt-4 justify-content-center" for="">
             Don't have a Shop.id account?
             <Link to="/login" className="page-login">
               Login
