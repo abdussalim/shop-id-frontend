@@ -116,17 +116,17 @@ const NavbarBase = ({ onChange, onClick, src, srcCart }) => {
                 variant="link"
                 id="dropdown-menu-align-end"
               >
-                <Dropdown.Item className="d-flex justify-content-center">
+                <Dropdown.Item className="btn bg-transparent d-flex justify-content-center">
                   <p>
                     <b>{user.fullname}</b>
                   </p>
                 </Dropdown.Item>
                 <Dropdown.Divider />
-                <Link to="/productList">
-                  <Dropdown.Item className="d-flex justify-content-center">
+                <Dropdown.Item className="btn bg-transparent d-flex justify-content-center">
+                  <Link to="/productList">
                     <button className="btn bg-transparent">My Product</button>
-                  </Dropdown.Item>
-                </Link>
+                  </Link>
+                </Dropdown.Item>
                 <Dropdown.Divider />
                 <Link to="/login" onClick={() => handleSignOut()}>
                   <Dropdown.Item className="btn bg-transparent d-flex justify-content-center">
