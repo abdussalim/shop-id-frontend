@@ -73,7 +73,7 @@ const ProductList = () => {
                 <li>
                   <Link
                     to="/productlist"
-                    className="link-dark d-inline-flex text-decoration-none rounded ms-3 mt-5"
+                    className="link-dark d-inline-flex text-decoration-none rounded ms-3 mt-2"
                   >
                     My Products
                   </Link>
@@ -81,7 +81,7 @@ const ProductList = () => {
               </ul>
             </Profile>
           </div>
-          <div className="card col-sm col-md col-lg-8 profil-form mt-3">
+          <div className="card col-sm col-md col-lg-8 profil-form mt-5">
             <h4 className="mb-3">My Products</h4>
             <div className="d-flex flex-row bd-highlight mb-3">
               <div className="p-2 bd-highlight text-success">All Items</div>
