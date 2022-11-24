@@ -100,7 +100,7 @@ const Register = ({ label, ...props }) => {
           <button className="w-100 btn btn-sign mt-5" type="submit">
             Register
           </button>
-          <label className="login mb-3 mt-4 justify-content-center" for="">
+          <label className="logSin mb-3 mt-4 justify-content-center" for="">
             Don't have a Shop.id account?
             <Link to="/login" className="page-login">
               Login

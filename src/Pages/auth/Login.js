@@ -1,31 +1,31 @@
-import './style.css'
-import React,{useState} from 'react'
+import "./style.css";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import logo from '../../assets/image/shop-id.svg'
+import logo from "../../assets/image/shop-id.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../configs/redux/actions/userAction";
 
-  const Login = () => {
-      const navigate = useNavigate();
-      const dispatch = useDispatch();
-      const { isLoading } = useSelector((state) => state.auth);
-      const [formLogin, setFormLogin] = useState({
-        email: "",
-        password: "",
-      });
+const Login = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { isLoading } = useSelector((state) => state.auth);
+  const [formLogin, setFormLogin] = useState({
+    email: "",
+    password: "",
+  });
 
-      const handleChange = (e) => {
-        setFormLogin({
-          ...formLogin,
-          [e.target.name]: e.target.value,
-        });
+  const handleChange = (e) => {
+    setFormLogin({
+      ...formLogin,
+      [e.target.name]: e.target.value,
+    });
   };
-  console.log(formLogin.email)
-      const handleLogin = (e) => {
-        e.preventDefault();
-        dispatch(loginUser(formLogin, navigate));
-      };
+  console.log(formLogin.email);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    dispatch(loginUser(formLogin, navigate));
+  };
   return (
     <div>
       <div className="form-signin">
@@ -66,7 +66,7 @@ import { loginUser } from "../../configs/redux/actions/userAction";
             {isLoading ? "loading.." : "Login"}
           </button>
           <label className="register mb-3 mt-4 me-auto" htmlFor="register">
-            Don't have a Tokopedia account?
+            Don't have a Shop.id account?
             <Link className="page-register me-auto" to="/register">
               Register
             </Link>
@@ -75,6 +75,6 @@ import { loginUser } from "../../configs/redux/actions/userAction";
       </div>
     </div>
   );
-  }
+};
 
-  export default Login
+export default Login;
