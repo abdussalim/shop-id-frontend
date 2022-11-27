@@ -73,11 +73,11 @@ REACT_APP_API_BACKEND=YOUR_API_URL
 
 ### Add Product
 
-<img src="./readme/shop-id-6.jpg" />
+<img src="./readme/shop-id-7.jpg" />
 
 ### Edit Product
 
-<img src="./readme/shop-id-6.jpg" />
+<img src="./readme/shop-id-8.jpg" />
 
 <!-- RELATED PROJECT -->
 
