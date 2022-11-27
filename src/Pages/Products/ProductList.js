@@ -81,7 +81,7 @@ const ProductList = () => {
               </ul>
             </Profile>
           </div>
-          <div className="card col-sm col-md col-lg-8 profil-form mt-5">
+          <div className="card col-md col-sm col-lg-8 profil-form mt-5">
             <h4 className="mb-3">My Products</h4>
             <div className="d-flex flex-row bd-highlight mb-3">
               <div className="p-2 bd-highlight text-success">All Items</div>
