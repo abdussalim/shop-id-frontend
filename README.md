@@ -49,29 +49,35 @@ REACT_APP_API_BACKEND=YOUR_API_URL
 
 ## Screenshot
 
+### Register
+
+<img src="./readme/shop-id-1.jpg" />
+
+### Login
+
+<img src="./readme/shop-id-2.jpg" />
+
 ### Home
 
-<img src="./readme/shop-id-1.png" />
+<img src="./readme/shop-id-3.jpg" />
 
-### Detail Product
+<img src="./readme/shop-id-4.jpg" />
 
-<img src="./readme/shop-id-2.png" />
+### Product Detail
 
-###
+<img src="./readme/shop-id-5.jpg" />
 
-<img src="./readme/shop-id-3.png" />
+### Product List
 
-### Bag
-
-<img src="./readme/shop-id-4.png" />
-
-### profile
-
-<img src="./readme/shop-id-5.png" />
+<img src="./readme/shop-id-6.jpg" />
 
 ### Add Product
 
-<img src="./readme/shop-id-6.png" />
+<img src="./readme/shop-id-6.jpg" />
+
+### Edit Product
+
+<img src="./readme/shop-id-6.jpg" />
 
 <!-- RELATED PROJECT -->
 
