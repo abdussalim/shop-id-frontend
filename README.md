@@ -83,8 +83,9 @@ REACT_APP_API_BACKEND=YOUR_API_URL
 
 ## Related Project
 
-- [Shop Id BE](https://github.com/abdussalim/shop-id-frontend)
-- [Shop Id Demo](https://shop-id-frontend.vercel.app/)
+- [Shop.id Backend](https://github.com/abdussalim/shop-id-backend)
+- [Shop.id Demo Frontend](https://shop-id-frontend.vercel.app/)
+- [Shop.id Demo Backend](https://shop-id-backend.vercel.app/main/)
 
 <!-- CONTACT INFO -->
 
