@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./readme/Logo.svg" width="200px" height="200px" />
 </div>
-<h3 align="center">Shop Id</h3>
+<h3 align="center">Shop.id Frontend</h3>
 <p align="center">
   <a href="https://shop-id-frontend.vercel.app/">View Demo</a>
   ·
