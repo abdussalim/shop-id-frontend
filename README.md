@@ -12,7 +12,7 @@
 
 ## About The Project
 
-Shop id is a website-based application that makes it easy for people to get products that are sold online by other people. Shop id is developed with PERN satck (PostgreSQL, Express js, Reactjs, Node js). Hire jobs is an Individual project, here I created Backend and Frontend. Shop id is a website-based application that makes it easy for people to get products that are sold online by other people. Shop id is developed with PERN satck (PostgreSQL, Express js, Reactjs, Node js). Shop Id is an Individual project, here I create Backend and Frontend.
+Shop id is a website-based application that makes it easy for people to get products that are sold online by other people. Shop id is developed with PERN satck (PostgreSQL, Express.js, React.js, Node.js). Hire jobs is an Individual project, here I created Backend and Frontend. Shop id is a website-based application that makes it easy for people to get products that are sold online by other people. Shop id is developed with PERN satck (PostgreSQL, Express js, Reactjs, Node js). Shop Id is an Individual project, here I create Backend and Frontend.
 
 ### Technology Used
 
